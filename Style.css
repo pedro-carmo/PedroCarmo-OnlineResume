@@ -1,0 +1,108 @@
+/*VARIABLES*/
+:root{
+    --BGColour: #424242;
+    --PrimaryColour: lightgray;
+    --SecondaryColour: cornflowerblue;
+    --SecondaryHoverColour: #506b9d;
+    --BoldColour: #ececec;
+}
+
+/*GENERAL*/
+*{/*Removes all margin and padding to ease alignment editions*/
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin: 5%;
+    background-color: var(--BGColour);
+    color: var(--PrimaryColour);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: normal;
+    line-height: normal;
+    text-align: justify;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{/*All h1 should be like this*/
+    text-align: center;
+    line-height: normal;
+    margin: 1%;
+    color: var(--BoldColour);
+}
+h3{
+    color: var(--BoldColour);
+}
+p{/*All p should be like this*/
+    margin-bottom: 3%;
+    line-height: 150%;
+}
+ul{/*All li should be like this*/
+    margin-bottom: 3%;
+    list-style-position: inside;
+    line-height: 150%;
+}
+strong{
+    font-weight: bold;
+    color: var(--BoldColour);
+}
+a:hover{
+    background-color: var(--SecondaryHoverColour);
+}
+
+/*CLASSES*/
+.Info_Main{/*All content, except H1*/
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: center;
+}
+.Info_Text{/*Info P Group and Buttons Group*/
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+    gap: 3%;
+}
+.Info_P{
+    margin-bottom: 5%;
+}
+.Info_Buttons_Links{/*configs specifically for the buttons*/
+    padding: 3%;
+    border-radius: 15px;
+    width: 30%;
+
+    background-color: var(--SecondaryColour);
+    color: var(--PrimaryColour);
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+.Info_MyPhoto{
+    text-align: left;
+    width: 250px;
+}
+.JobPositionTitle{/*Profesional Experience Section's job position*/
+    font-weight: bold;
+    font-style: italic;
+}
+
+@media (max-width: 650px){
+    .Info_Main{/*All content, except H1*/
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 10px;
+    }
+    .Info_Buttons_Links{/*configs specifically for the buttons*/
+        align-self: center;
+        margin-bottom: 5%;
+    }
+    p{/*All p should be like this*/
+        margin-bottom: 10%;
+        width: auto;
+    }
+    ul{/*All li should be like this*/
+        margin-bottom: 10%;
+    }
+}
